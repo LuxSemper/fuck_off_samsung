@@ -50,6 +50,13 @@ if [ $bfv = "y" ]; then
  else
   echo "kk u~u"
  fi
+ echo "Uninstall Youtube?"
+ read -p "[y/n]: " yt
+ if [ $yt = "y" ]; then
+  adb uninstall --user 0 com.google.android.youtube
+ else
+  echo "guess you want to watch those furry animations, huh?"
+ fi
  echo "Uninstall Experimental Packages?"
  read -p "[y/n]: " epk
  if [ $epk = "y" ]; then
