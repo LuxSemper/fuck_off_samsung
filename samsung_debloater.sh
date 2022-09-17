@@ -87,7 +87,7 @@ else
 fi
 echo "Uninstall Youtube?"
 read -p "[y/n]: " yt
-if [ $yt = "y" ]; then
+if [ $yt = "y" ] || [ $yt = "Y" ]; then
  adb uninstall --user 0 com.google.android.youtube
  echo "Removed Youtube"
 else
@@ -95,7 +95,7 @@ else
 fi
 echo "Uninstall Experimental Packages (choose `n` to cancel and get package list)?"
 read -p "[y/n]: " epk
-if [ $epk = "y" ]; then
+if [ $epk = "y" ] || [ $epk = "Y" ]; then
  adb uninstall --user 0 com.dsi.ant.sample.acquirechannels
  adb uninstall --user 0 com.dsi.ant.service.socket
  adb uninstall --user 0 com.dsi.ant.server
